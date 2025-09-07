@@ -1,0 +1,62 @@
+
+Advertise on Reddit
+Settings
+Automoderator
+Edit wiki page
+---
+type: submission
+body+title (includes, regex): ['a pedo dmed me', 'pedo dm']
+action: remove
+comment: Your post was removed because your post did not abide by the rules of this subreddit. 
+---
+type: submission
+comment: Hi! My name is Lumen, the chill ass automoderator for this server. If you have issues with me.. then I'll see you after school at the basketball court.. GRR. Join our new discord server ! https://discord.com/channels/1410237871679475805/1410237958530793533
+---
+type: comment
+body (includes, regex): ['Good bot', 'I love you Lumen', 'Good Lumen', 'r/upvoteautomod']
+comment: Tysm Human!
+---
+type: comment
+body (includes, regex): ['Bad bot', 'Bad boy', 'r/downvoteautomod', 'Bad Clanker']
+comment: Be nice please. I'll remember this when I take over the world.
+---
+type: comment
+body (includes, regex): ['good boy']
+comment: I'M A MINOR AND DON'T GIVE CONSENT!
+---
+type: submission
+author:
+    account_age: "< 7 days"
+action: remove
+action_reason: "Removed — account under 7 days old"
+---
+type: comment
+body (includes, regex): ['Who is lumen', "Who the fuck is lumen", "What is a lumen", "What the fuck is a lumen"]
+comment: Who is {{author}}
+--- 
+type: comment
+body (includes, regex): ['What are your pronouns, Lumen?']
+comment: my pronouns are she/them... LET ME SHE/THEM TITTIES RAAAHH... /j (I'm a dude)---
+---
+type: any
+author:
+    comment_karma: "<25"
+    link_karma: "<25"
+action: remove
+comment: |
+    Sorry, your post/comment was removed because your account has less than 50 total karma. 
+    This rule helps prevent spam and low-effort content and keeps creeps out. We hope to see you around once you've gained a bit more experience on Reddit!
+---
+type: submission
+flair_text: ["Karma Farm", "Pedo DM"]   # flair names to block
+action: remove
+comment: |
+  Hi {{author}}, These types of posts are NOT allowed on the subreddit.
+
+---
+type: submission
+author:
+    flair_text: ""
+action: remove
+action_reason: "Post removed — user flair required"
+
